@@ -1,0 +1,94 @@
+.title-container{
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+.slogan-container{
+    outline: 1px solid black;
+    display: flex;
+    justify-content: center;
+}
+.size-control{
+    display: flex;
+    justify-content: center;
+    outline: 1px solid black;
+    padding: 10px;
+}
+.grid-and-controls{
+    display: flex;
+}
+.controls{
+    box-sizing: border-box;
+    outline: 1px solid black;
+    width: 200px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid-container{
+    box-sizing: border-box;
+    outline: 1px solid black;
+    width: 800px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.grid{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-direction: row;
+    outline: 1px solid black;
+    margin: auto;
+    width: 400px;
+    height:300px;
+    max-width: 400px;
+    max-height: 300px;
+}
+.buttons-container{
+    box-sizing: border-box;
+    outline: 1px solid black;
+    width: 140px;
+    height: 300px;
+}
+.clear-button{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    outline: 1px solid black;
+}
+.black-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    outline: 1px solid black;
+}
+.color-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    outline: 1px solid black;
+}
+.erase-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+    outline: 1px solid black;
+}
+button{
+    width: 80px;
+    height: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#grid-size{
+    width:100px;
+}

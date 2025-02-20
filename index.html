@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch a Sketch</title>
+    <link rel = "stylesheet" href = "style.css">
+</head>
+<body>
+    <div class="title-container">
+        <div class="title">
+            <h1>Etch a Sketch</h1>
+        </div>      
+    </div>
+    <div class="slogan-container">
+        Sketch, Erase, Repeat - Unleash Your Endless Creativity!
+    </div>
+    <div class="size-control">
+        <input type = "number" min ="1" max = "50" id = "grid-size" placeholder="Enter grid size">
+        <button onclick="createGrid(document.querySelector('#grid-size').value)">Enter</button>
+    </div>
+    <div class="grid-and-controls">
+        <div class="controls">
+            <div class="buttons-container">
+                <div class="clear-button">
+                    <button id = "clear-button">Clear</button>
+                </div>
+                <div class="black-button">
+                    <button id = "black-button">Black</button>
+                </div>
+                <div class="color-button">
+                    <input type = "color" id = "color-button"></input>
+                </div>
+                <div class="erase-button">
+                    <button id = "erase-button">Erase</button>
+                </div>
+            </div>
+        </div>
+        <div class="grid-container">
+            <div class="grid" ></div>
+        </div>
+    </div>
+
+    <script src = "script.js"></script>
+</body>
+</html>
