@@ -1,42 +1,48 @@
-Etch-a-Sketch
+# 🎨 Etch-a-Sketch
 
-This is a web-based Etch-a-Sketch game built using HTML,CSS and JavaScript. Users can draw on a grid by hovering over it, mimicking the classic toy experience. The grid size is adjustable based on user input, and the game includes a creative slogan below the title.
+A web-based Etch-a-Sketch game built with **HTML**, **CSS**, and **JavaScript**, letting users sketch by hovering over a customizable grid. It replicates the nostalgic feel of the classic Etch-a-Sketch toy with modern interactive features.
 
-Features
+---
 
-Dynamic grid size based on user input
+## ✨ Features
 
-Real-time drawing effect on hover
+- 🎯 **Dynamic Grid Size** – Grid adjusts based on user input (1–50)
+- 🖌️ **Real-time Drawing** – Hover over the grid to draw instantly
+- 🧠 **Interactive UI** – Intuitive design for smooth user experience
+- 🎨 **Color Buttons** – Switch between default, black, eraser, and random color modes
+- 🔁 **Clear Button** – Reset the grid with one click
 
-Interactive user experience
+---
 
-Simple and intuitive UI
+## 💻 Technologies Used
 
-Technologies Used
+- **HTML** – Structure of the webpage
+- **CSS** – Styling and layout
+- **JavaScript** – Grid logic, drawing effects, and event handling
 
-HTML: Structure of the webpage
+---
 
-JavaScript: Logic for grid creation and event handling
+## 🚀 How to Use
 
-How to Use
+1. Open the project in your browser.
+2. Enter the desired grid size (between 1 and 50).
+3. Start drawing by clicking and hovering over the grid.
+4. Use buttons to:
+   - Switch color modes
+   - Erase parts of your sketch
+   - Clear the entire grid
 
--Open the project in a browser.
+---
 
--Enter the desired grid size.
+## 🌱 Future Enhancements
 
--Start drawing by hovering over the grid.
+- 🧽 Add more drawing modes and patterns
+- 🖍️ Custom color palettes
 
--Refresh or reset to start over.
+---
 
-Future Enhancements
+## 👨‍💻 Author
 
--Add color customization
+**Yamkela Jack**
 
-Implement an eraser tool
-
-Include different drawing modes
-
-Author
-
-Yamkela Jack
 
