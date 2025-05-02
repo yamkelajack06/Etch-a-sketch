@@ -26,7 +26,7 @@ A web-based Etch-a-Sketch game built with **HTML**, **CSS**, and **JavaScript**,
 
 1. Open the project in your browser.
 2. Enter the desired grid size (between 1 and 50).
-3. Start drawing by clicking and hovering over the grid.
+3. Start drawing by clicking on the grid.
 4. Use buttons to:
    - Switch color modes
    - Erase parts of your sketch
