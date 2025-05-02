@@ -51,7 +51,7 @@ function createGrid(gridSize) {
 
   const clearGrid = () => {
     const columns = grid.querySelectorAll("div div");
-    columns.forEach(column => {
+    columns.forEach((column) => {
       column.style.backgroundColor = "white";
     });
   };

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: 'Permanent Marker', cursive;
     background-color: #f7f7f7;
     display: flex;
     flex-direction: column;
@@ -108,20 +108,41 @@ body {
     transition: background-color 0.3s ease;
 }
 
-.clear-button:hover {
-    background-color: #f44336;
-    color: white;
+#clear-button,
+#erase-button,
+#black-button,
+#color-button {
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 1.1rem;
+}
+#color-button{
+    width:80px;
+    height: 30px;
+    border-radius: 40px;
+}
+#clear-button:hover{
+    background-color: #6f61ff;
 }
 
-.black-button:hover {
-    background-color: #333;
-    color: white;
+#erase-button:hover{
+    background-color: #6f61ff;
 }
 
-.erase-button:hover {
-    background-color: #ffeb3b;
-    color: black;
+#black-button:hover{
+    background-color: #6f61ff;
 }
+
+#color-button:hover{
+    width: calc(80px + 80px * 1/2);
+    height: calc(30px + 30px * 1/2);
+    border-radius: 100px;
+}
+
 
 .color-button input {
     width: 40px;
