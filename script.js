@@ -1,5 +1,9 @@
+document.addEventListener("DOMContentLoaded", function(){
+    createGrid(2);
+})
 const grid = document.querySelector(".grid");
 let isDrawing = false;
+//I just added a comment
 
 function createGrid(gridSize){
     if (gridSize < 1){
@@ -41,8 +45,17 @@ function createGrid(gridSize){
     }
     isFunctionCalled = true;
 }
+
+
+
 grid.addEventListener("mouseup", () => {
     isDrawing = false;
+});
+
+const sizeButton = document.querySelector("#size-button");
+sizeButton.addEventListener('click', () => {
+    const gridSize = document.querySelector("#grid-size").value;
+    createGrid(gridSize);
 });
 
 
