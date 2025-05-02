@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +6,8 @@
 
 body {
     font-family: 'Permanent Marker', cursive;
-    background-color: #f7f7f7;
+    background-color: #f9fafb; 
+    color: #333; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -19,7 +19,6 @@ body {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    height: 10%;
 }
 
 .slogan-container {
@@ -27,8 +26,8 @@ body {
     justify-content: center;
     margin-bottom: 20px;
     font-size: 1rem;
-    color: #555;
-    font-style: oblique;
+    color: #777; 
+    font-style: italic;
 }
 
 .size-control {
@@ -39,33 +38,32 @@ body {
     gap: 10px;
     align-items: center;
     width: 350px;
-    height: 35px;
 }
 
 #grid-size {
     padding: 5px;
-    font-size: .9rem;
-    width: 80px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    height: 2em;
+    font-size: 1rem;
     width: 120px;
+    border: 2px solid #b8c2cc;
+    border-radius: 8px;
+    background-color: #fff;
+    color: #6c7c8c; 
 }
 
 #size-button {
-    font-size: .9rem;
+    font-size: 1rem;
     height: 2em;
     width: 80px;
-    background-color: #4CAF50;
-    color: white;
+    background-color: #341de2;
+    color: #fff;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 #size-button:hover {
-    background-color: #45a049;
+    background-color: #ff7f7f;
 }
 
 .grid-and-controls {
@@ -80,10 +78,10 @@ body {
     height: 300px;
     align-items: center;
     gap: 10px;
-    border: 1px solid #ddd;
-    padding: 10px;
-    background-color: #fff;
+    border: 2px solid #bbb;
+    background-color: #ffffff;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .buttons-container {
@@ -102,85 +100,72 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #f4f4f4;
-    border-radius: 5px;
+    background-color: #9fa1a3;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: transform 0.2s ease, background-color 0.3s ease;
+}
+
+.clear-button:hover,
+.black-button:hover,
+.erase-button:hover,
+.color-button:hover {
+    transform: scale(1.05);
+    background-color:  #341de2; 
+    color: white;
 }
 
 #clear-button,
 #erase-button,
-#black-button,
-#color-button {
-    width: 70px;
-    height: 30px;
-    border-radius: 10px;
-    border: none;
+#black-button {
     width: 100%;
     height: 100%;
     font-size: 1.1rem;
-}
-#color-button{
-    width:80px;
-    height: 30px;
-    border-radius: 40px;
-}
-#clear-button:hover{
-    background-color: #6f61ff;
+    background-color: transparent;
+    border: none;
+    color: black;
 }
 
-#erase-button:hover{
-    background-color: #6f61ff;
-}
-
-#black-button:hover{
-    background-color: #6f61ff;
-}
-
-#color-button:hover{
-    width: calc(80px + 80px * 1/2);
-    height: calc(30px + 30px * 1/2);
-    border-radius: 100px;
-}
-
-
-.color-button input {
+#color-button {
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    background-color: #ffeb99;
     cursor: pointer;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-
 .grid-container {
-    width: 400px;  
+    width: 400px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #333;
+    border: 3px solid #b8c2cc; 
     background-color: #fff;
-    border-radius: 10px;
+    border-radius: 12px;
     padding: 10px;
+    box-shadow: 0 0 10px #b8c2cc;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(16, 1fr); 
-    grid-template-rows: repeat(16, 1fr);  
+    grid-template-columns: repeat(16, 1fr);
+    grid-template-rows: repeat(16, 1fr);
     grid-gap: 1px;
     width: 100%;
     height: 100%;
 }
 
 .grid div {
-    background-color: white;
-    border: 1px solid #ddd;
-    width: 100%;
-    height: 100%;
+    background-color: #ffffff; 
+    border: 1px solid #f1f1f1; 
     transition: background-color 0.2s ease;
 }
 
 .grid div:hover {
-    background-color: #b7b4b4;
+    background-color: #e1f3f1;
 }
+
+
