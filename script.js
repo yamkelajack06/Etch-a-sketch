@@ -1,5 +1,6 @@
 const grid = document.querySelector(".grid");
 let isDrawing = false;
+let currentColor = "blue";
 
 function createGrid(gridSize) {
   if (gridSize < 1) {
@@ -31,23 +32,18 @@ function createGrid(gridSize) {
 
       column.addEventListener("mousedown", () => {
         isDrawing = true;
-        column.style.backgroundColor = "blue";
+        column.style.backgroundColor = currentColor;
       });
 
       column.addEventListener("mousemove", () => {
         if (isDrawing) {
-          column.style.backgroundColor = "blue";
+          column.style.backgroundColor = currentColor;
         }
       });
     }
 
     grid.appendChild(row);
   }
-
-  const clearButton = document.querySelector("#clear-button");
-  clearButton.addEventListener("click", () => {
-    clearGrid();
-  });
 
   const clearGrid = () => {
     const columns = grid.querySelectorAll("div div");
@@ -56,7 +52,10 @@ function createGrid(gridSize) {
     });
   };
 
-  isFunctionCalled = true;
+  const clearButton = document.querySelector("#clear-button");
+  clearButton.addEventListener("click", () => {
+    clearGrid();
+  });
 }
 
 grid.addEventListener("mouseup", () => {
@@ -65,10 +64,25 @@ grid.addEventListener("mouseup", () => {
 
 document.addEventListener("DOMContentLoaded", () => {
   createGrid(2);
-});
 
-const sizeButton = document.querySelector("#size-button");
-sizeButton.addEventListener("click", () => {
-  const gridSize = document.querySelector("#grid-size").value;
-  createGrid(gridSize);
+  const sizeButton = document.querySelector("#size-button");
+  sizeButton.addEventListener("click", () => {
+    const gridSize = document.querySelector("#grid-size").value;
+    createGrid(gridSize);
+  });
+
+  const blackButton = document.querySelector("#black-button");
+  blackButton.addEventListener("click", () => {
+    currentColor = "black";
+  });
+
+  const colorPicker = document.querySelector("#color-button");
+  colorPicker.addEventListener("input", () => {
+    currentColor = colorPicker.value;
+  });
+
+  const eraseButton = document.querySelector("#erase-button");
+  eraseButton.addEventListener("click", () => {
+    currentColor = "white";
+  });
 });
