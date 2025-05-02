@@ -12,7 +12,6 @@ function createGrid(gridSize) {
     alert("Value must be less than or equal to 50");
     return;
   }
-
   grid.innerHTML = "";
   isDrawing = false;
   grid.style.display = "flex";
@@ -26,8 +25,8 @@ function createGrid(gridSize) {
 
     for (let j = 0; j < gridSize; j++) {
       const column = document.createElement("div");
-      column.style.flex = "1";
       column.style.outline = "1px solid black";
+      column.style.flex = "1";
       row.appendChild(column);
 
       column.addEventListener("mousedown", () => {
@@ -86,3 +85,16 @@ document.addEventListener("DOMContentLoaded", () => {
     currentColor = "white";
   });
 });
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+const randomButton = document.querySelector('#random-button');
+randomButton.addEventListener('click', () => {
+  let R = getRandomInt(0,255);
+  let G = getRandomInt(0,255);
+  let B = getRandomInt(0,255);
+
+  currentColor = `rgb(${R}, ${G}, ${B})`;
+})
