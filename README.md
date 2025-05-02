@@ -1,6 +1,6 @@
 # 🎨 Etch-a-Sketch
 
-A web-based Etch-a-Sketch game built with **HTML**, **CSS**, and **JavaScript**, letting users sketch by hovering over a customizable grid. It replicates the nostalgic feel of the classic Etch-a-Sketch toy with modern interactive features.
+A web-based Etch-a-Sketch game built with **HTML**, **CSS**, and **JavaScript**, letting users sketch by clicking on a customizable grid. It replicates the nostalgic feel of the classic Etch-a-Sketch toy with modern interactive features.
 
 ---
 
