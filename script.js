@@ -1,6 +1,18 @@
 const grid = document.querySelector(".grid");
 let isDrawing = false;
 let currentColor = "blue";
+let useRandomColor = false;
+
+function getRandomInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function getRandomRGB() {
+  const R = getRandomInt(0, 255);
+  const G = getRandomInt(0, 255);
+  const B = getRandomInt(0, 255);
+  return `rgb(${R}, ${G}, ${B})`;
+}
 
 function createGrid(gridSize) {
   if (gridSize < 1) {
@@ -12,6 +24,7 @@ function createGrid(gridSize) {
     alert("Value must be less than or equal to 50");
     return;
   }
+
   grid.innerHTML = "";
   isDrawing = false;
   grid.style.display = "flex";
@@ -31,12 +44,12 @@ function createGrid(gridSize) {
 
       column.addEventListener("mousedown", () => {
         isDrawing = true;
-        column.style.backgroundColor = currentColor;
+        column.style.backgroundColor = useRandomColor ? getRandomRGB() : currentColor;
       });
 
       column.addEventListener("mousemove", () => {
         if (isDrawing) {
-          column.style.backgroundColor = currentColor;
+          column.style.backgroundColor = useRandomColor ? getRandomRGB() : currentColor;
         }
       });
     }
@@ -73,28 +86,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const blackButton = document.querySelector("#black-button");
   blackButton.addEventListener("click", () => {
     currentColor = "black";
+    useRandomColor = false;
   });
 
   const colorPicker = document.querySelector("#color-button");
   colorPicker.addEventListener("input", () => {
     currentColor = colorPicker.value;
+    useRandomColor = false;
   });
 
   const eraseButton = document.querySelector("#erase-button");
   eraseButton.addEventListener("click", () => {
     currentColor = "white";
+    useRandomColor = false;
+  });
+
+  const randomButton = document.querySelector("#random-button");
+  randomButton.addEventListener("click", () => {
+    useRandomColor = true;
   });
 });
-
-function getRandomInt(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-const randomButton = document.querySelector('#random-button');
-randomButton.addEventListener('click', () => {
-  let R = getRandomInt(0,255);
-  let G = getRandomInt(0,255);
-  let B = getRandomInt(0,255);
-
-  currentColor = `rgb(${R}, ${G}, ${B})`;
-})
